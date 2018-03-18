@@ -19,11 +19,15 @@ function addToCart(item) {
 
 function viewCart() {
   var myCart = [];
-  var item = items.itemName;
-  var price = items.itemPrice;
+
   for (var i = 0; i < cart.length; i++) {
-    myCart.push(` ${item} at ${price}`); 
-  }
+    for (var items in cart){
+      var cartList = cart[i]
+      var item = cartList.itemName;
+      var price = cartList.itemPrice;
+      myCart.push(` ${item} at $${price}`);
+    }
+  }  
   if (myCart.length === 0){
     return ('Your shopping cart is empty.');
   } else if (myCart.length === 1) {
