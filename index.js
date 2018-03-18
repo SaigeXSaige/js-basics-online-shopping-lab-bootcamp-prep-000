@@ -20,6 +20,7 @@ function addToCart(item) {
 
 function viewCart() {
   var myCart = [];
+  var myCartAnd = myCart.slice(0 , myCart.length - 1);
 
   for (var i = 0; i < cart.length; i++) {
       var cartList = cart[i]
@@ -33,7 +34,6 @@ function viewCart() {
   } else if (myCart.length === 1) {
     return ('In your cart, you have' + myCart + '.');
   } else {
-    var myCartAnd = myCart.slice(0 , myCart.length - 1);
     myCartAnd.push(' and' + myCart[-1]);
     return ('In your cart, you have' + myCartAnd + '.');
   }
