@@ -34,7 +34,7 @@ function viewCart() {
     return ('In your cart, you have' + myCart + '.');
   } else {
     myCartAnd = myCart.slice(0 , myCart.length - 1);
-    myCartAnd.push(' and' + myCart[-1])
+    myCartAnd.push(' and' + myCart[-1]);
      return ('In your cart, you have' + myCartAnd + '.');
   }
 }
