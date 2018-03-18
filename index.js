@@ -12,6 +12,7 @@ function setCart(c) {
 }
 
 function addToCart(item) {
+  var price = Math.floor(Math.random() * (100)) + 1;
   var items = { itemName: `${item}` , itemPrice: price};
   cart.push(items);
   return (`${item} has been added to your cart.`);
@@ -32,7 +33,7 @@ function viewCart() {
   } else if (myCart.length === 1) {
     return ('In your cart, you have' + myCart + '.');
   } else {
-    var myCartAnd = myCart.slice(0 , myCart.length - 1);
+    myCartAnd = myCart.slice(0 , myCart.length - 1);
     myCartAnd.push(' and' + myCart[-1])
      return ('In your cart, you have' + myCartAnd + '.');
   }
