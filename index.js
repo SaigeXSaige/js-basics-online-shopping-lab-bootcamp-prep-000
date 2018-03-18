@@ -24,8 +24,11 @@ function viewCart() {
   }
   if (myCart.length === 0){
     return ('Your shopping cart is empty.');
-  } else {
+  } else if (myCart.length === 1) {
     return ('In your cart, you have' + myCart + '.');
+  } else {
+    
+    return 
   }
 }
 
