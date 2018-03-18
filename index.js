@@ -21,20 +21,19 @@ function viewCart() {
   var myCart = [];
 
   for (var i = 0; i < cart.length; i++) {
-    for (var items in cart){
       var cartList = cart[i]
       var item = cartList.itemName;
       var price = cartList.itemPrice;
       myCart.push(` ${item} at $${price}`);
     }
-  }  
+    
   if (myCart.length === 0){
     return ('Your shopping cart is empty.');
   } else if (myCart.length === 1) {
     return ('In your cart, you have' + myCart + '.');
   } else {
     var myCartAnd = myCart.slice(0 , myCart.length - 1);
-    myCartAnd.push(' and' + myCart[i])
+    myCartAnd.push(' and' + myCart[-1])
     return 
   }
 }
