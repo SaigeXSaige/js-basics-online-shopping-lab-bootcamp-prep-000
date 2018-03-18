@@ -27,7 +27,7 @@ function viewCart() {
   } else if (myCart.length === 1) {
     return ('In your cart, you have' + myCart + '.');
   } else {
-    
+    myCartAnd = myCart.slice(0 , array.length - 1);
     return 
   }
 }
